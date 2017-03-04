@@ -4,9 +4,6 @@
 
 This cheat sheet acts as a intro to Python for data science. ***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork and tune it to your taste!***
 
-One of the most commonly used functions of NumPy are *NumPy arrays*: The essential difference between *lists* and *NumPy arrays* is functionality and speed. *lists* give you basic operation, but *NumPy* adds FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc.</br>
-The most important difference for data science is the ability to do **element-wise calculations** with *NumPy arrays*.
-
 ## Index
 1. [Basics](#basics)
     - [Placeholders](#place)
@@ -34,6 +31,9 @@ The most important difference for data science is the ability to do **element-wi
 </br>
 
 ## Basics <a name="basics"></a>
+
+One of the most commonly used functions of NumPy are *NumPy arrays*: The essential difference between *lists* and *NumPy arrays* is functionality and speed. *lists* give you basic operation, but *NumPy* adds FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc.</br>
+The most important difference for data science is the ability to do **element-wise calculations** with *NumPy arrays*.
 
 `axis 0` always refers to row </br>
 `axis 1` always refers to column
