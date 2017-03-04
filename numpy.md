@@ -2,7 +2,7 @@
 
 [NumPy](http://www.numpy.org) is the fundamental package for scientific computing with Python.
 
-This cheat sheet acts as a intro to Python for data science.
+This cheat sheet acts as a intro to Python for data science. ***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork and tune it to your taste!***
 
 One of the most commonly used functions of NumPy are *NumPy arrays*: The essential difference between *lists* and *NumPy arrays* is functionality and speed. *lists* give you basic operation, but *NumPy* adds FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc.</br>
 The most important difference for data science is the ability to do **element-wise calculations** with *NumPy arrays*.
@@ -151,7 +151,7 @@ print(y)
 |`np.sin(x)`|Element-wise sine|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin)|
 |`np.cos(x)`|Element-wise cosine|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos)|
 |`np.log(x)`|Element-wise natural log|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html#numpy.log)|
-|`np.dot(x)`|Dot product|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html)|
+|`np.dot(x,y)`|Dot product|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html)|
 
 Remember: NumPy array operations work element-wise.
 
