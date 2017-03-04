@@ -2,7 +2,7 @@
 
 This rep is a growing list of Python cheat sheets, tailored for Data Science.
 
-***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork and tune it to your taste!***
+***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork, contribute and tune it to your taste!***
 
 ### Currently includes:
 [NumPy](https://github.com/JulianGaal/python-cheat-sheet/blob/master/NumPy.md)
