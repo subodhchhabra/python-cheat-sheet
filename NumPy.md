@@ -42,7 +42,7 @@ The most important difference for data science is the ability to do **element-wi
 | :------------- | :------------- | :--------|
 |`np.array([1,2,3])`|1d array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html#numpy.array)|
 |`np.array([(1,2,3),(4,5,6)])`|2d array|see above|
-|`np.arange(start,stop,step)`|Arange array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html)|
+|`np.arange(start,stop,step)`|range array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html)|
 
 ### Placeholders <a name="place"></a>
 | Operators | Description |Documentation|
