@@ -214,7 +214,7 @@ print(c)
 |`array[0:2,1]`|Select items of rows 0 and 1 at column 1|see above|
 |`array[:1]`|Select items of row 0 (equals array[0:1, :])|see above|
 |`array[1:2, :]`|Select items of row 1|see above|
-<!---|`array[1,...]`|equals array[1,:,:]|see above|-->
+[comment]: <> (|`array[1,...]`|equals array[1,:,:]|see above|)
 |`array[ : :-1]`|Reverses `array`|see above|
 
 
