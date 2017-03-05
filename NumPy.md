@@ -251,9 +251,9 @@ a = np.array([1,2,3,6,1,4,1])
 b = np.array([5,6,7,8,3,1,2])
 
 # Only saves a at index where b == 1
-other_a = a[b == '1']
+other_a = a[b == 1]
 #Saves every spot in a except at index where b != 1
-other_other_a = a[b != '1']
+other_other_a = a[b != 1]
 ```
 
 ```python
