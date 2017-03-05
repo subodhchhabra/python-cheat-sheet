@@ -209,11 +209,12 @@ print(c)
 | :------------- | :------------- | :------------- |
 |`array[i]`|1d array at index i|[link](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)|
 |`array[i,j]`|2d array at index[i][j]|see above|
-|`array[i<2]`|Boolean Indexing|see above|
-|`array[0:2]`|Select items of index 0 and 1|see above|
+|`array[i<4]`|Boolean Indexing, see [Tricks](#tricks)|see above|
+|`array[0:3]`|Select items of index 0, 1 and 2|see above|
 |`array[0:2,1]`|Select items of rows 0 and 1 at column 1|see above|
 |`array[:1]`|Select items of row 0 (equals array[0:1, :])|see above|
-|`array[1,...]`|equals array[1,:,:]|see above|
+|`array[1:2, :]`|Select items of row 1|see above|
+<!---|`array[1,...]`|equals array[1,:,:]|see above|-->
 |`array[ : :-1]`|Reverses `array`|see above|
 
 
