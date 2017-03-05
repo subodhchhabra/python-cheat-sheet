@@ -244,7 +244,7 @@ print(b[:, 0])
 ## Tricks <a name="tricks"></a>
 This is a growing list of examples. Know a good trick? Let me know [here](twitter.com/JulianGaal) or fork it and create a pull request.
 
-"SQL WHERE trick", couldn't come up with a better title...
+*boolean indexing*
 ```python
 # Index trick when working with two np-arrays
 a = np.array([1,2,3,6,1,4,1])
