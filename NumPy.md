@@ -257,10 +257,10 @@ other_other_a = a[b != '1']
 ```
 
 ```python
->>> x = np.array([4,6,8,1,2,6,9])
->>> y = x > 5
->>> print(x[y])
-[6 8 6 9]
+x = np.array([4,6,8,1,2,6,9])
+y = x > 5
+print(x[y])
+>>> [6 8 6 9]
 ```
 
 </br>
