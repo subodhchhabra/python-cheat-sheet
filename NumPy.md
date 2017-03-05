@@ -242,7 +242,7 @@ print(b[:, 0])
 </br>
 
 ## Tricks <a name="tricks"></a>
-This is a growing list of examples
+This is a growing list of examples. Know a good trick? Let me know [here](twitter.com/JulianGaal) or fork it and create a pull request.
 
 "SQL WHERE trick", couldn't come up with a better title...
 ```python
@@ -261,6 +261,12 @@ x = np.array([4,6,8,1,2,6,9])
 y = x > 5
 print(x[y])
 >>> [6 8 6 9]
+
+# Even shorter
+x = np.array([1, 2, 3, 4, 4, 35, 212, 5, 5, 6, ])
+print(x[x < 5])
+>>> [1 2 3 4 4]
+
 ```
 
 </br>
