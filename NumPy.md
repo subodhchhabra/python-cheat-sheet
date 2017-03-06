@@ -47,7 +47,7 @@ The most important difference for data science is the ability to do **element-wi
 ### Placeholders <a name="place"></a>
 | Operators | Description |Documentation|
 | :------------- | :------------- |:---------- |
-|`np.linspace(0,2,9)`|Add evenly spaced values btw intervall to array of length |[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html)|
+|`np.linspace(0,2,9)`|Add evenly spaced values btw interval to array of length |[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html)|
 |`np.zeros((1,2))`|Create and array filled with zeros|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)|
 |`np.ones((1,2))`|Creates an array filled with ones|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ones.html#numpy.ones)|
 |`np.random.random((5,5))`|Creates random array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.random.html)|
@@ -251,7 +251,7 @@ print(d)
 ## Tricks <a name="tricks"></a>
 This is a growing list of examples. Know a good trick? Let me know [here](twitter.com/JulianGaal) or fork it and create a pull request.
 
-*boolean indexing* (available as seperate `.py` file [here](https://github.com/JulianGaal/python-cheat-sheet/blob/master/code/boolean-indexing.py)
+*boolean indexing* (available as separate `.py` file [here](https://github.com/JulianGaal/python-cheat-sheet/blob/master/code/boolean-indexing.py)
 ```python
 # Index trick when working with two np-arrays
 a = np.array([1,2,3,6,1,4,1])
