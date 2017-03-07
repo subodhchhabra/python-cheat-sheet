@@ -26,7 +26,6 @@ This cheat sheet acts as a intro to Python for data science. ***Contact me [here
 4. [Slicing and Subsetting](#ss)
     - [Examples](#exp)
 5. [Tricks](#tricks)
-6. [Credits](#creds)
 
 </br>
 
@@ -276,8 +275,3 @@ print(x[x < 5])
 
 ```
 
-</br>
-
-## Credits <a name="creds"></a>
-[Datacamp](https://www.datacamp.com/home),
-[Quandl](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas,+SciPy,+NumPy+Cheat+Sheet.pdf) & [Official docs](https://docs.scipy.org/doc/numpy/)
