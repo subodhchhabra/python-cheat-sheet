@@ -26,15 +26,15 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| fig = plt.figures()      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
+| `fig = plt.figures()`      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
 
 *Axes*
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| fig.add_axes() |Initializes fig for later ax addition| [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.add_axes) |
-| a = fig.add_subplot(222)|A subplot is an axes on a grid system <br/> row-col-num, see [examples](#examples) | [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure)|
-| fig, b = plt.subrows(nrows=3, nclos=2)|Adds subplot| [link](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot)|
+| `fig.add_axes()` |Initializes fig for later ax addition| [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.add_axes) |
+| `a = fig.add_subplot(222)`|A subplot is an axes on a grid system <br/> row-col-num, see [examples](#examples) | [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure)|
+| `fig, b = plt.subrows(nrows=3, nclos=2)`|Adds subplot| [link](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot)|
 
 ### Plotting <a name="plotting"></a>
 
@@ -42,26 +42,26 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| lines = ax.plot(x,y)|Draw lines, Prerequisites <br/>`fig = plt.figure()` <br/>`ax = fig.add_subplot(111)`|[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.VertexSelector)|
-| plt.scatter(x,y)<br/>ax.scatter(x,y)|Creates a scatterplot, unconnected data points|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib.axes.Axes.scatter) <br/> [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib-axes-axes-scatter)|
-| plt.bar(xvalue, data , width, color...)|simple vertical bar chart|[link](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.bar)|
-| plt.barh(yvalue, data, width, color...)|simple horizontal bar|[link](http://matplotlib.org/api/pyplot_api.html?highlight=barh#matplotlib.pyplot.barh)|
+| `lines = ax.plot(x,y)`|Draw lines, Prerequisites <br/>`fig = plt.figure()` <br/>`ax = fig.add_subplot(111)`|[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.VertexSelector)|
+| `plt.scatter(x,y)`<br/>`ax.scatter(x,y)`|Creates a scatterplot, unconnected data points|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib.axes.Axes.scatter) <br/> [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib-axes-axes-scatter)|
+| `plt.bar(xvalue, data , width, color...)`|simple vertical bar chart|[link](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.bar)|
+| `plt.barh(yvalue, data, width, color...)`|simple horizontal bar|[link](http://matplotlib.org/api/pyplot_api.html?highlight=barh#matplotlib.pyplot.barh)|
 For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.boxplot)
 
 *Plot styles*
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-|plt.hist(x, y)</br>ax.hist(x, y)|Plots a histogram       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist.html?highlight=hist#matplotlib.axes.Axes.hist)|
-|plt.boxplot(x,y)<br/>ax.boxplot(x,y)|Box and Whisker plot|       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=boxplot#matplotlib.pyplot.boxplot)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.boxplot.html?highlight=boxplot#matplotlib.axes.Axes.boxplot)|
-|plt.violinplot(x, y)<br/>ax.violinplot(x, y)| Creates violin plot       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=violinplot#matplotlib.pyplot.violinplot)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.violinplot.html?highlight=violinplot#matplotlib.axes.Axes.violinplot)|
+|`plt.hist(x, y)`</br>`ax.hist(x, y)`|Plots a histogram       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist.html?highlight=hist#matplotlib.axes.Axes.hist)|
+|`plt.boxplot(x,y)`<br/>`ax.boxplot(x,y)`|Box and Whisker plot|       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=boxplot#matplotlib.pyplot.boxplot)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.boxplot.html?highlight=boxplot#matplotlib.axes.Axes.boxplot)|
+|`plt.violinplot(x, y)`<br/>`ax.violinplot(x, y)`| Creates violin plot       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=violinplot#matplotlib.pyplot.violinplot)<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.violinplot.html?highlight=violinplot#matplotlib.axes.Axes.violinplot)|
 | Item One       | Item Two       | Item Three   |
 
 *2D Data*
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-|fig, ax = plt.subplots()</br>im = ax.imshow(img, cmap, vmin...)|Colormapped or RGB arrays| [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.imshow.html?highlight=imshow#matplotlib.axes.Axes.imshow)|
+|`fig, ax = plt.subplots()`</br>`im = ax.imshow(img, cmap, vmin...)`|Colormapped or RGB arrays| [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.imshow.html?highlight=imshow#matplotlib.axes.Axes.imshow)|
 
 ### Customization <a name="custom"></a>
 
@@ -69,17 +69,17 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| plt.plot(x, y, color='lightblue')|colors plot to color blue|[link](http://matplotlib.org/api/pyplot_api.html?highlight=plot#matplotlib.pyplot.plot)|
-| ax.plot(x ,y, alpha = 0.4) <br/> ax.plot(x, y, color='blue')|colors plot      |[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html?highlight=ax%20plot#matplotlib.axes.Axes.plot)|
-|fig.colorbar(mappable, orientation='horizontal')|`mappable`: the Image, Contourset etc to which colorbar applies|[link](http://matplotlib.org/api/figure_api.html?highlight=colorbar#matplotlib.figure.Figure.colorbar)|
+| `plt.plot(x, y, color='lightblue')`|colors plot to color blue|[link](http://matplotlib.org/api/pyplot_api.html?highlight=plot#matplotlib.pyplot.plot)|
+| `ax.plot(x ,y, alpha = 0.4)` <br/> `ax.plot(x, y, color='blue')`|colors plot      |[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html?highlight=ax%20plot#matplotlib.axes.Axes.plot)|
+|`fig.colorbar(mappable, orientation='horizontal')`|`mappable`: the Image, Contourset etc to which colorbar applies|[link](http://matplotlib.org/api/figure_api.html?highlight=colorbar#matplotlib.figure.Figure.colorbar)|
 
 *Markers* (see [examples](#examples)) <br/> Prerequisites for ax:  fig, ax = plt.subplots()
 
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| plt.plot(x, y, marker='*')<br/>plt.scatter(x, y, marker='.')|adds `*`/`.` for every data point|[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_marker)|
-| ax.plot(x, y, marker='^') <br/> ax.scatter(x, y, marker='O')|adds `O`/`^` for every data point       |[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_marker)|
+| `plt.plot(x, y, marker='*')<br/>`plt.scatter(x, y, marker='.')`|adds `*`/`.` for every data point|[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_marker)|
+| `ax.plot(x, y, marker='^')` <br/> `ax.scatter(x, y, marker='O')`|adds `O`/`^` for every data point       |[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.Line2D.set_marker)|
 
 ## Examples
 
