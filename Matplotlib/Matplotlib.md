@@ -14,12 +14,14 @@ Not a total beginner? Jump straight down to the [examples](#examples)
 NumPy is probably your best friend for that. Check out my CheatSheet [here](https://github.com/juliangaal/python-cheat-sheet/blob/master/NumPy/NumPy.md)
 
 ## Creating Plots <a name="plots"></a>
+*Figure*
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| *Figure*       |        |    |
 | fig = plt.figures()      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
-| *Axes*       |   |   |
-| fig.add_axes()       |Initializes fig for later ax addition| |
+*Axes* 
+| Operator    | Description     | Documentation |
+| :------------- | :------------- | :----------- |
+| fig.add_axes() |Initializes fig for later ax addition| |
 | a = fig.add_subplot(222)|A subplot is an axes on a grid system <br/> row-col-num, see [examples](#examples) | [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure)|
 | fig, b = plt.subrows(nrows=3, nclos=2)|Adds subplot| [link](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot)|
 
