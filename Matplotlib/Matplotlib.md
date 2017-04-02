@@ -4,7 +4,7 @@
 
 This serves as a cheat sheet for Matplotlib, a 2d plotting library for Python.
 
-Not a total beginner? Jump straight down to the [examples](#examples) or get the [jupyter notebook file](). Also, the official [example library](http://matplotlib.org/examples/index.html) is pretty sweet.
+Not a total beginner? Jump straight down to the [examples](#examples) or get the [jupyter notebook file](https://github.com/juliangaal/python-cheat-sheet/blob/master/Matplotlib/examples.ipynb). Also, the official [example library](http://matplotlib.org/examples/index.html) is pretty sweet.
 
 ## Index
 1. [Prepare Data](#prepare)
@@ -134,7 +134,7 @@ ax2.set_xlim(1, 7.5)
 plt.savefig('mediumplot.png')
 plt.show()
 ```
-![alt-text](/img/medium.png)
+![alt-text](/img/medium.png) ![alt-text](/img/medium.png)
 
 Thanks to for this [good example](http://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl)
 ```python
