@@ -21,6 +21,7 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 | fig = plt.figures()      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
 
 *Axes*
+
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 | fig.add_axes() |Initializes fig for later ax addition| |
