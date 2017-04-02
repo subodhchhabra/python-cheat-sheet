@@ -15,10 +15,12 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 
 ## Creating Plots <a name="plots"></a>
 *Figure*
+
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 | fig = plt.figures()      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
-*Axes* 
+
+*Axes*
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 | fig.add_axes() |Initializes fig for later ax addition| |
