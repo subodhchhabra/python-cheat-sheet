@@ -4,7 +4,7 @@
 
 This serves as a cheat sheet for Matplotlib, a 2d plotting library for Python.
 
-Not a total beginner? Jump straight down to the [examples](#examples). Also, the official [example library](http://matplotlib.org/examples/index.html) is pretty sweet.
+Not a total beginner? Jump straight down to the [examples](#examples) or get the [jupyter notebook file](). Also, the official [example library](http://matplotlib.org/examples/index.html) is pretty sweet.
 
 ## Index
 1. [Prepare Data](#prepare)
@@ -42,7 +42,7 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-| `lines = ax.plot(x,y)`|Draw lines, Prerequisites <br/>`fig = plt.figure()` <br/>`ax = fig.add_subplot(111)`|[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.VertexSelector)|
+| `lines = plt.plot(x,y)`<br/>`lines = ax.plot(x,y)`|Draw lines, Prerequisites for ax?<br/>`fig = plt.figure()` <br/>`ax = fig.add_subplot(111)`|[link](http://matplotlib.org/api/pyplot_api.html?highlight=plot#matplotlib.pyplot.plot)<br/>[link](http://matplotlib.org/api/lines_api.html#matplotlib.lines.VertexSelector)|
 | `plt.scatter(x,y)`<br/>`ax.scatter(x,y)`|Creates a scatterplot, unconnected data points|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib.axes.Axes.scatter) <br/> [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.scatter.html?highlight=scatter#matplotlib-axes-axes-scatter)|
 | `plt.bar(xvalue, data , width, color...)`|simple vertical bar chart|[link](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.bar)|
 | `plt.barh(yvalue, data, width, color...)`|simple horizontal bar|[link](http://matplotlib.org/api/pyplot_api.html?highlight=barh#matplotlib.pyplot.barh)|
@@ -134,7 +134,42 @@ ax2.set_xlim(1, 7.5)
 plt.savefig('mediumplot.png')
 plt.show()
 ```
-![alt-text](/img/mediumplot.png)
+![alt-text](/img/medium.png)
+
+Thanks to for this [good example](http://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl)
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# First way #
+
+x = np.random.rand(10)
+y = np.random.rand(10)
+
+figure1 = plt.plot(x,y)
+
+# Second way #
+
+x1 = np.random.rand(10)
+x2 = np.random.rand(10)
+x3 = np.random.rand(10)
+x4 = np.random.rand(10)
+y1 = np.random.rand(10)
+y2 = np.random.rand(10)
+y3 = np.random.rand(10)
+y4 = np.random.rand(10)
+
+figure2, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+ax1.plot(x1,y1)
+ax2.plot(x2,y2)
+ax3.plot(x3,y3)
+ax4.plot(x4,y4)
+
+plt.show()
+```
+If you haven't used NumPy before, check out my [cheat sheet](https://github.com/juliangaal/python-cheat-sheet/blob/master/NumPy/NumPy.md)
+
+![alt-text](/img/axes.png)
 
 ### Advanced
 
@@ -160,7 +195,7 @@ ax2.axhline(0, color='black', lw=2)
 
 plt.show()
 ```
-![alt-text](/img/advancedplot.png)
+![alt-text](/img/advanced.png)
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
