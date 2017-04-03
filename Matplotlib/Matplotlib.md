@@ -10,6 +10,8 @@ Not a total beginner? Jump straight down to the [examples](#examples) or get the
 1. [Prepare Data](#prepare)
 2. [Plots](#plots)
     * [Creating Plots](#plots)
+        * [Figure](#figure)
+        * [Axes](#axes)
     * [Plotting](#plotting)
         * [1D Data](#1d)
         * [2D Data](#2d)
@@ -20,8 +22,10 @@ Not a total beginner? Jump straight down to the [examples](#examples) or get the
         * [Lines](#lines)
         * [Text](#text)
         * [Limits, Labels, Layout](#limits)
-3. [Plotting](#plotting)
-[Examples](#examples)
+3. [Examples](#examples)
+    * [Basics](#basics)
+    * [Subplotting](#sub)
+    * [Advanced](#advanced)
 
 ## 1. Prepare Data <a name="prepare"></a>
 
@@ -31,13 +35,13 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 
 ### Creating plots
 
-*Figure*
+*Figure* <a name="figure"></a>
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 | `fig = plt.figures()`      | a container that contains all plot elements | [link](http://matplotlib.org/api/figure_api.html) |
 
-*Axes*
+*Axes* <a name="axes"></a>
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
@@ -46,6 +50,8 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 |` ax = plt.subplots(2, 2)`|Creates subplot|[link](http://matplotlib.org/api/pyplot_api.html?highlight=subplots#matplotlib.pyplot.subplots)|
 
 Axes are very useful for subplots. See example [here](#axes)
+
+**After configuring your plot, you must use `plt.show()` to make it visible**
 
 ### Plotting <a name="1d"></a>
 
@@ -60,6 +66,7 @@ Axes are very useful for subplots. See example [here](#axes)
 |`plt.hist(x, y)`|Plots a histogram|[link](http://matplotlib.org/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist)|
 |`plt.boxplot(x,y)`|Box and Whisker plot|       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=boxplot#matplotlib.pyplot.boxplot)|
 |`plt.violinplot(x, y)`| Creates violin plot       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=violinplot#matplotlib.pyplot.violinplot)|
+|ax.fill(x, y, color='lightblue')<br/> ax.fill_between(x,y,color='yellow')|Fill area under/between plots|[link](http://matplotlib.org/api/pyplot_api.html?highlight=fill#matplotlib.pyplot.fill)|
 
 For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.boxplot)
 
@@ -68,6 +75,8 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 |`fig, ax = plt.subplots()`</br>`im = ax.imshow(img, cmap, vmin...)`|Colormapped or RGB arrays| [link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.imshow.html?highlight=imshow#matplotlib.axes.Axes.imshow)|
+
+Suggestions?
 
 *Saving plots* <a name="save"></a>
 
@@ -111,7 +120,7 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 |`ax.annotate('some annotation', xy=(10, 10))`|Annotate the point with coordinates`xy` with text `s`|[link](http://matplotlib.org/api/pyplot_api.html?highlight=annotate#matplotlib.pyplot.annotate)|
 |`plt.title(r'$delta_i=20$', fontsize=10)`|Mathtext|[link](http://matplotlib.org/users/mathtext.html)|
 
-*Limits, Legends, Layout*
+*Limits, Legends/Labels , Layout* <a name="lll"></a>
 
 *Limits*
 
@@ -123,19 +132,27 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 |`plt.margins(x=1.0, y=1.0)`|Set margins: add padding to a plot, values 0 - 1||
 |`plt.axis('equal')`|Set the aspect ratio of the plot to 1||
 
-*Legends*
+*Legends/Labels*
 
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
-|``|||
-|``|||
-|``|||
-|``|||
-|``|||
+|`plt.title('just a title')`|Sets title of plot|[link](http://matplotlib.org/api/pyplot_api.html?highlight=title#matplotlib.pyplot.title)|
+|`plt.xlabel('x-axis')`|Sets label next to x-axis|[link](http://matplotlib.org/api/pyplot_api.html?highlight=xlabel#matplotlib.pyplot.xlabel)|
+|`plt.ylabel('y-axis')``|Sets label next to y-axis|[link](http://matplotlib.org/api/pyplot_api.html?highlight=ylabel#matplotlib.pyplot.ylabel)|
+|`ax.set(title='axis', ylabel='Y-Axis', xlabel='X-Axis')`|Set title and axis labels|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set.html?highlight=set#matplotlib.axes.Axes.set)|
+|`ax.legend(loc='best')`|No overlapping plot elements|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.legend.html?highlight=legend#matplotlib.axes.Axes.legend)|
+
+*Ticks*
+
+| Operator    | Description     | Documentation |
+| :------------- | :------------- | :----------- |
+|`plt.xticks(x, labels, rotation='vertical')`|Set ticks, [example](#ticks)|[link](http://matplotlib.org/examples/ticks_and_spines/ticklabels_demo_rotation.html)|
+|`ax.xaxis.set(ticks=range(1,5), ticklabels=[3,100,-12,"foo"])`|Set x-ticks|[link](http://matplotlib.org/api/_as_gen/matplotlib.axis.XAxis.set.html?highlight=xaxis%20set#matplotlib.axis.XAxis.set)|
+|`ax.tick_params(axis='y', direction='inout', length=10)`|Make y-ticks longer and go in and out|[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.tick_params.html?highlight=tick_params#matplotlib.axes.Axes.tick_params)|
 
 ## Examples <a name="examples"></a>
 
-### Basics
+### Basics <a name="basics"></a>
 ```python
 import matplotlib.pyplot as plt
 
@@ -170,7 +187,26 @@ plt.show()
 ```
 ![alt-text](/img/lines.png)
 
-### Subplotting Examples
+<a name="ticks"></a>
+```python
+import matplotlib.pyplot as plt
+
+
+x = [1, 2, 3, 4]
+y = [1, 4, 9, 6]
+labels = ['Frogs', 'Hogs', 'Bogs', 'Slogs']
+
+plt.plot(x, y, 'ro')
+# You can specify a rotation for the tick labels in degrees or with keywords.
+plt.xticks(x, labels, rotation='vertical')
+# Pad margins so that markers don't get clipped by the axes
+plt.margins(0.2)
+plt.savefig('ticks.png')
+plt.show()
+```
+![alt-text](/img/ticks.png)
+
+### Subplotting Examples <a name="sub"></a>
 ```python
 import matplotlib.pyplot as plt
 
@@ -236,7 +272,22 @@ If you haven't used NumPy before, check out my [cheat sheet](https://github.com/
 
 ![alt-text](/img/axes.png)
 
-### Advanced
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 1, 500)
+y = np.sin(4 * np.pi * x) * np.exp(-5 * x)
+
+fig, ax = plt.subplots()
+
+ax.fill(x, y, color='lightblue')
+plt.show()
+```
+![alt-text](/img/fill.png)
+[source](http://matplotlib.org/api/pyplot_api.html?highlight=fill#matplotlib.pyplot.fill)
+
+### Advanced <a name="advanced"></a>
 
 Taken from [official docs](http://matplotlib.org/api/pyplot_api.html)
 ```python
