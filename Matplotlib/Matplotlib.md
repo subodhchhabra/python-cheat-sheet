@@ -285,6 +285,7 @@ ax.fill(x, y, color='lightblue')
 plt.show()
 ```
 ![alt-text](/img/fill.png)
+
 [source](http://matplotlib.org/api/pyplot_api.html?highlight=fill#matplotlib.pyplot.fill)
 
 ### Advanced <a name="advanced"></a>
