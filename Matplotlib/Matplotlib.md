@@ -114,6 +114,7 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 *Limits, Legends, Layout*
 
 *Limits*
+
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 |`plt.xlim(0, 7)`|Sets x-axis to display 0 - 7 |[link](http://matplotlib.org/api/pyplot_api.html?highlight=xlim#matplotlib.pyplot.xlim)|
@@ -123,6 +124,7 @@ For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.h
 |`plt.axis('equal')`|Set the aspect ratio of the plot to 1||
 
 *Legends*
+
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 |``|||
