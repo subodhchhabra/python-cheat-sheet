@@ -46,8 +46,8 @@ NumPy is probably your best friend for that. Check out my CheatSheet [here](http
 | Operator    | Description     | Documentation |
 | :------------- | :------------- | :----------- |
 | `fig.add_axes()`<br/>`a = fig.add_subplot(222)` |Initializes subplot <br/> A subplot is an axes on a grid system <br/> row-col-num, see [examples](#examples) | [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.add_axes) <br/> [link](http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure)|
-| `fig, b = plt.subrows(nrows=3, nclos=2)`|Adds subplot| [link](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot)|
-|` ax = plt.subplots(2, 2)`|Creates subplot|[link](http://matplotlib.org/api/pyplot_api.html?highlight=subplots#matplotlib.pyplot.subplots)|
+| `fig, b = plt.subplots(nrows=3, nclos=2)`|Adds subplot| [link](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot)|
+|`ax = plt.subplots(2, 2)`|Creates subplot|[link](http://matplotlib.org/api/pyplot_api.html?highlight=subplots#matplotlib.pyplot.subplots)|
 
 Axes are very useful for subplots. See example [here](#axes)
 
@@ -66,7 +66,7 @@ Axes are very useful for subplots. See example [here](#axes)
 |`plt.hist(x, y)`|Plots a histogram|[link](http://matplotlib.org/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist)|
 |`plt.boxplot(x,y)`|Box and Whisker plot|       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=boxplot#matplotlib.pyplot.boxplot)|
 |`plt.violinplot(x, y)`| Creates violin plot       |[link](http://matplotlib.org/api/pyplot_api.html?highlight=violinplot#matplotlib.pyplot.violinplot)|
-|ax.fill(x, y, color='lightblue')<br/> ax.fill_between(x,y,color='yellow')|Fill area under/between plots|[link](http://matplotlib.org/api/pyplot_api.html?highlight=fill#matplotlib.pyplot.fill)|
+|`ax.fill(x, y, color='lightblue')`<br/>`ax.fill_between(x,y,color='yellow')`|Fill area under/between plots|[link](http://matplotlib.org/api/pyplot_api.html?highlight=fill#matplotlib.pyplot.fill)|
 
 For more advanced box plots, start [here](http://matplotlib.org/api/pyplot_api.html?highlight=bar#matplotlib.pyplot.boxplot)
 
@@ -128,7 +128,7 @@ Suggestions?
 | :------------- | :------------- | :----------- |
 |`plt.xlim(0, 7)`|Sets x-axis to display 0 - 7 |[link](http://matplotlib.org/api/pyplot_api.html?highlight=xlim#matplotlib.pyplot.xlim)|
 |`plt.ylim(-0.5, 9)`|Sets y-axis to display -0.5 - 9|[link](http://matplotlib.org/api/pyplot_api.html?highlight=ylim#matplotlib.pyplot.ylim)|
-|`ax.set(xlim=[0, 7], ylim=[-0.5, 9])`<br/>ax.set_xlim(0, 7)|Sets limits|[link]()<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_ylim.html?highlight=ylim#matplotlib.axes.Axes.set_ylim)|
+|`ax.set(xlim=[0, 7], ylim=[-0.5, 9])`<br/>`ax.set_xlim(0, 7)`|Sets limits|[link]()<br/>[link](http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_ylim.html?highlight=ylim#matplotlib.axes.Axes.set_ylim)|
 |`plt.margins(x=1.0, y=1.0)`|Set margins: add padding to a plot, values 0 - 1||
 |`plt.axis('equal')`|Set the aspect ratio of the plot to 1||
 
@@ -312,49 +312,5 @@ ax2.axhline(0, color='black', lw=2)
 plt.show()
 ```
 ![alt-text](/img/advanced.png)
-
-| Operator    | Description     | Documentation |
-| :------------- | :------------- | :----------- |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-| Item One       | Item Two       | Item Three   |
-
-| Operator    | Description     | Documentation |
-| :------------- | :------------- | :----------- |
-|``|||
-|``|||
-|``|||
-|``|||
-|``|||
-|``|||
-|``|||
-|``|||
-
-Classic example: gdp per capita and life expectancy
-```python
-# gdp_cap on the x-axis, life_exp on the y-axis
-plt.plot(gdp_cap, life_exp)
-
-# Display the plot
-plt.show()
-```
-result:
-
-### Customization
-label
-xticks
-title
-
-.text
-.grid (True/False)
-
-*common arguments for matplotlib diagrams*
-size
-color
-alpha (opacity)
 
 Sources: [Datacamp](www.datacamp.com), [Official Docs](http://matplotlib.org/api/) and [Quandl](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas,+SciPy,+NumPy+Cheat+Sheet.pdf)
