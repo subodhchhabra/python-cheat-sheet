@@ -1,4 +1,3 @@
-***IN DEVELOPMENT***
 
 # Matplotlib
 
