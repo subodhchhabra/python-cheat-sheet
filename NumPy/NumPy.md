@@ -218,7 +218,7 @@ print(c)
 |`array[ : :-1]`|Reverses `array`|see above|
 
 
-#### Examples <a name"exp"></a>
+#### Examples <a name="exp"></a>
 ```python
 b = np.array([(1, 2, 3), (4, 5, 6)])
 
