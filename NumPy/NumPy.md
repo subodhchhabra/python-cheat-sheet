@@ -2,6 +2,16 @@
 
 [NumPy](http://www.numpy.org) is the fundamental package for scientific computing with Python.
 
+### Installation
+If you don't already have it **installed**, you can do so using Pip or Anaconda:
+```
+$ pip install numpy
+```
+or
+```
+$ conda install numpy
+```
+
 This cheat sheet acts as a intro to Python for data science. ***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork and tune it to your taste!***
 
 ## Index
