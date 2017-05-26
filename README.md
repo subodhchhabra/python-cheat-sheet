@@ -25,7 +25,5 @@ $ conda install --yes --file requirements.txt
 This will install all the packages to your environment.
 
 ### Future additions:
-* Rospy <br/>
-* (Maybe) SciKit Learn </br>
 * Basic Python syntax </br>
-* Pandas </br>
+* (Probably) Pandas
