@@ -1,4 +1,4 @@
-# Just a short test file for playing around
+# THIS IS AN UNSTRUCTURED TEST FILE
 import numpy as np
 
 # Index trick when working with two np-arrays
@@ -10,6 +10,7 @@ other_a = a[b == 1]
 # Saves every spot in a except at index where b != 1
 other_other_a = a[b != 1]
 
+# BOOLEAN INDEXING
 x = np.array([4, 6, 8, 1, 2, 6, 9])
 y = x > 5
 print(x[y])

@@ -2,6 +2,16 @@
 
 [NumPy](http://www.numpy.org) is the fundamental package for scientific computing with Python.
 
+### Installation
+If you don't already have it **installed**, you can do so using Pip or Anaconda:
+```
+$ pip install numpy
+```
+or
+```
+$ conda install numpy
+```
+
 This cheat sheet acts as a intro to Python for data science. ***Contact me [here](https://twitter.com/JulianGaal) for typos or suggestions, and - of course - fork and tune it to your taste!***
 
 ## Index
@@ -14,14 +24,18 @@ This cheat sheet acts as a intro to Python for data science. ***Contact me [here
       * [Examples](#array-example)
     - [Array Manipulation](#man)
       * [Adding/Removing Elements](#addrem)
+        + [Examples](#array-elements-examples)
       * [Combining Arrays](#comb)
+        + [Examples](#array-combine-examples)
       * [Splitting Arrays](#split)
+        + [Examples](#array-split-examples)
 3. [Mathematics](#maths)
     - [Arithmetic Operations](#ops)
       * [Examples](#operations-examples)
     - [Comparison](#comparison)
       * [Examples](#comparison-example)
     - [Basic Statistics](#stats)
+      * [Examples](#stats-examples)
     - [More](#more)
 4. [Slicing and Subsetting](#ss)
     - [Examples](#exp)
@@ -115,12 +129,40 @@ print(y)
 |`array.resize((2,4))`|Resize array to shape(2,4)|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.resize.html)|
 |`np.delete(array,1,axis)`|Deletes items from array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.delete.html)|
 
+#### Example <a name="array-elements-examples"></a>
+```python
+# Append items to array
+a = np.array([(1, 2, 3),(4, 5, 6)])
+b = np.append(a, [(7, 8, 9)])
+print(b)
+>>> [1 2 3 4 5 6 7 8 9]
+
+# Remove index 2 from previous array
+print(np.delete(b, 2))
+>>> [1 2 4 5 6 7 8 9]
+```
+
 ### Combining Arrays <a name="comb"></a>
 |Operator|Description|Documentation|
 |:---------|:-------|:---------|
 |`np.concatenate((a,b),axis=0)`|Concatenates 2 arrays, adds to end|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html)|
 |`np.vstack((a,b))`|Stack array row-wise|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.vstack.html)|
 |`np.hstack((a,b))`|Stack array column wise|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.hstack.html#numpy.hstack)|
+
+#### Example <a name="array-combine-examples"></a>
+```python
+a = np.array([1, 3, 5])
+b = np.array([2, 4, 6])
+
+# Stack two arrays row-wise
+print(np.vstack((a,b)))
+>>> [[1 3 5]
+     [2 4 6]]
+
+# Stack two arrays column-wise
+print(np.hstack((a,b)))
+>>> [1 3 5 2 4 6]
+```
 
 ### Splitting Arrays <a name="split"></a>
 |Operator|Description|Documentation|
@@ -129,6 +171,13 @@ print(y)
 |`np.array_split(array, 3)`|Split an array in sub-arrays of (nearly) identical size|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_split.html#numpy.array_split)|
 |`numpy.hsplit(array, 3)`|Split the array horizontally at 3rd index|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.hsplit.html#numpy.hsplit)|
 
+#### Example <a name="array-split-examples"></a>
+```python
+# Split array into groups of ~3
+a = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+print(np.array_split(a, 3))
+>>> [array([1, 2, 3]), array([4, 5, 6]), array([7, 8])]
+```
 
 ### More <a name="more"></a>
 |Operator|Description|Documentation|
@@ -143,10 +192,10 @@ print(y)
 ### Operations <a name="ops"></a>
 | Operator | Description     |Documentation|
 | :------------- | :------------- |:---------|
-|`np.add(x,y)`|Addition|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)|
-|`np.substract(x,y)`|Subtraction|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html#numpy.subtract)|
-|`np.divide(x,y)`|Division|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html#numpy.divide)|
-|`np.multiply(x,y)`|Multiplication|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html#numpy.multiply)|
+|`np.add(x,y)`<br/>`x + y`|Addition|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)|
+|`np.substract(x,y)`<br/>`x - y`|Subtraction|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html#numpy.subtract)|
+|`np.divide(x,y)`<br/>`x / y`|Division|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html#numpy.divide)|
+|`np.multiply(x,y)`<br/>`x @ y`|Multiplication|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html#numpy.multiply)|
 |`np.sqrt(x)`|Square Root|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt)|
 |`np.sin(x)`|Element-wise sine|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin)|
 |`np.cos(x)`|Element-wise cosine|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos)|
@@ -189,10 +238,25 @@ print(c)
 ### Basic Statistics <a name="stats"></a>
 | Operator | Description    | Documentation |
 | :------------- | :------------- |:--------- |
-|`array.mean()`</br>`np.mean(array)`|Mean|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html#numpy.mean)|
+|`np.mean(array)`|Mean|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html#numpy.mean)|
 |`np.median(array)`|Median|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html#numpy.median)|
 |`array.corrcoef()`|Correlation Coefficient|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html#numpy.corrcoef)|
 |`array.std(array)`|Standard Deviation|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.std.html#numpy.std)|
+
+#### Example <a name="stats-examples"></a>
+```python
+# Statistics of an array
+a = np.array([1, 1, 2, 5, 8, 10, 11, 12])
+
+# Standard deviation
+print(np.std(a))
+>>> 4.2938910093294167
+
+# Median
+print(np.median(a))
+>>> 6.5
+```
+
 
 ### More <a name="more"></a>
 | Operator | Description    | Documentation |
@@ -218,7 +282,7 @@ print(c)
 |`array[ : :-1]`|Reverses `array`|see above|
 
 
-#### Examples <a name"exp"></a>
+#### Examples <a name="exp"></a>
 ```python
 b = np.array([(1, 2, 3), (4, 5, 6)])
 
