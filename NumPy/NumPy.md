@@ -241,7 +241,7 @@ print(c)
 |`np.mean(array)`|Mean|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html#numpy.mean)|
 |`np.median(array)`|Median|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html#numpy.median)|
 |`array.corrcoef()`|Correlation Coefficient|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html#numpy.corrcoef)|
-|`array.std(array)`|Standard Deviation|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.std.html#numpy.std)|
+|`np.std(array)`|Standard Deviation|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.std.html#numpy.std)|
 
 #### Example <a name="stats-examples"></a>
 ```python
