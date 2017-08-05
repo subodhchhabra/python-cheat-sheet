@@ -126,7 +126,7 @@ print(y)
 |:-----------|:--------|:---------|
 |`np.append(a,b)`|Append items to array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.append.html)|
 |`np.insert(array, 1, 2, axis)`|Insert items into array at axis 0 or 1|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.insert.html)|
-|`array.resize((2,4))`|Resize array to shape(2,4)|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.resize.html)|
+|`np.resize((2,4))`|Resize array to shape(2,4)|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.resize.html)|
 |`np.delete(array,1,axis)`|Deletes items from array|[link](https://docs.scipy.org/doc/numpy/reference/generated/numpy.delete.html)|
 
 #### Example <a name="array-elements-examples"></a>
